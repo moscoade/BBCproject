@@ -10,7 +10,7 @@ namespace BBCProject.StepDefinitions
     [Binding]
     public class SearchStepDefinitions
     {
-        public IWebDriver driver = SearchHook.driver;
+        public IWebDriver driver = BaseTest.driver;
         AutomationPage automationPage = new AutomationPage();
 
         [Given(@"I navigate to BBc Website ""([^""]*)""")]

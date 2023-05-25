@@ -5,7 +5,7 @@ using TechTalk.SpecFlow;
 namespace BBCProject.Hooks
 {
     [Binding]
-    public class SearchHook
+    public class BaseTest
     {
         public static IWebDriver driver;
 
@@ -14,6 +14,8 @@ namespace BBCProject.Hooks
         {
            driver = new ChromeDriver(AppDomain.CurrentDomain.BaseDirectory);
             driver.Manage().Window.Maximize();
+           //driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
+            Thread.Sleep(5000);
         }
 
         
@@ -21,8 +23,8 @@ namespace BBCProject.Hooks
         [AfterScenario]
         public void AfterScenario()
         {
-            driver.Quit();
-            driver.Dispose();
+            //driver.Quit();
+           // driver.Dispose();
         }
     }
 }

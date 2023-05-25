@@ -19,8 +19,9 @@ namespace BBCProject.PageObject
         private By sportDly = By.CssSelector("#main-content > div.ssrcss-1v7bxtk-StyledContainer.enjd40x0 > div > div > ul > li:nth-child(1) > div");
         public AutomationPage()
         {
-            driver = SearchHook.driver;
+            driver = BaseTest.driver;
         }
+
 
         public void ClickSearchBBC()
         {
