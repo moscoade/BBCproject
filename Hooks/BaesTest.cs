@@ -23,8 +23,8 @@ namespace BBCProject.Hooks
         [AfterScenario]
         public void AfterScenario()
         {
-            //driver.Quit();
-           // driver.Dispose();
+            driver.Quit();
+           driver.Dispose();
         }
     }
 }
